@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaffer Conservatory and Instruments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand" href="./index.html" data-en="Shaffer Conservatory and Instruments" data-fr="Conservatoire et Instruments Shaffer">Shaffer Conservatory and Instruments</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./programs.html" data-en="Programs" data-fr="Programmes">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-en="Shop" data-fr="Boutique">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about_us.html" data-en="About Us" data-fr="À Propos">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="language-toggle" data-en="EN" data-fr="FR">EN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="position-relative">
+                    <img src="./instructors.webp" class="img-fluid custom-img" alt="Meet Our Instructors">
+                    <a href="./meet_instructors.html" class="btn btn-custom position-absolute bottom-10 start-50 translate-middle-x" data-en="Meet Our Instructors" data-fr="Rencontrez Nos Instructeurs">Meet Our Instructors</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="position-relative">
+                    <img src="./programs.webp" class="img-fluid custom-img" alt="Explore Our Courses">
+                    <a href="./programs.html" class="btn btn-custom position-absolute bottom-10 start-50 translate-middle-x" data-en="Explore Our Courses" data-fr="Explorez Nos Cours">Explore Our Courses</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="position-relative">
+                    <img src="./testamonials.webp" class="img-fluid custom-img" alt="View Testimonials">
+                    <a href="./testamonials.html" class="btn btn-custom position-absolute bottom-10 start-50 translate-middle-x" data-en="View Testimonials" data-fr="Voir Les Témoignages">View Testimonials</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="position-relative">
+                    <img src="./free-session.webp" class="img-fluid custom-img" alt="Book a Free Session">
+                    <a href="./about_us.html" class="btn btn-custom position-absolute bottom-10 start-50 translate-middle-x" data-en="Book a Free Session" data-fr="Réservez une Session Gratuite">Book a Free Session</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-transparent text-white text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Shaffer Conservatory and Instruments. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(language) {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                if (language === 'fr') {
+                    el.innerHTML = el.dataset.fr;
+                    el.dataset.currentLang = 'fr';
+                } else {
+                    el.innerHTML = el.dataset.en;
+                    el.dataset.currentLang = 'en';
+                }
+            });
+            document.getElementById('language-toggle').innerHTML = language === 'fr' ? 'FR' : 'EN';
+        }
+
+        document.getElementById('language-toggle').addEventListener('click', function(event) {
+            event.preventDefault();
+            const currentLang = this.innerHTML === 'EN' ? 'fr' : 'en';
+            localStorage.setItem('preferredLanguage', currentLang);
+            setLanguage(currentLang);
+        });
+
+        // On page load, check for preferred language in localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(preferredLanguage);
+        });
+    </script>
+</body>
+</html>
+

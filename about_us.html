@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shaffer Conservatory and Instruments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about_us.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand" href="./index.html" data-en="Shaffer Conservatory and Instruments" data-fr="Conservatoire et Instruments Shaffer">Shaffer Conservatory and Instruments</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./programs.html" data-en="Programs" data-fr="Programmes">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-en="Shop" data-fr="Boutique">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about_us.html" data-en="About Us" data-fr="À Propos">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="language-toggle" data-en="EN" data-fr="FR">EN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="notification" class="alert alert-success" role="alert" style="display:none; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+        Your session has been successfully booked!
+    </div>
+
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <img src="./gm.webp" class="img-fluid larger-img" alt="Google Maps Snapshot">
+            </div>
+            <div class="col-md-4">
+                <h2 data-en="How to Reach Us" data-fr="Comment Nous Contacter">How to Reach Us</h2>
+                <p data-en="<strong>Address:</strong><br> 123 Music Ave,<br> Suite 400, New York City<br>New York, J8T 3K6" data-fr="<strong>Adresse :</strong><br> 123 Avenue de la Musique,<br> Suite 400, New York<br>New York, J8T 3K6"><strong>Address:</strong><br> 123 Music Ave,<br> Suite 400, New York City<br>New York, J8T 3K6</p>
+                <p data-en="<strong>Phone:</strong> +123 456 7890" data-fr="<strong>Téléphone :</strong> +123 456 7890"><strong>Phone:</strong> +123 456 7890</p>
+                <h3 data-en="Operating Hours" data-fr="Heures d'Ouverture">Operating Hours</h3>
+                <ul class="list-unstyled operating-hours">
+                    <li data-en="Monday: 9:00 AM - 5:00 PM" data-fr="Lundi : 9:00 - 17:00">Monday: 9:00 AM - 5:00 PM</li>
+                    <li data-en="Tuesday: 9:00 AM - 5:00 PM" data-fr="Mardi : 9:00 - 17:00">Tuesday: 9:00 AM - 5:00 PM</li>
+                    <li data-en="Wednesday: 9:00 AM - 5:00 PM" data-fr="Mercredi : 9:00 - 17:00">Wednesday: 9:00 AM - 5:00 PM</li>
+                    <li data-en="Thursday: 9:00 AM - 5:00 PM" data-fr="Jeudi : 9:00 - 17:00">Thursday: 9:00 AM - 5:00 PM</li>
+                    <li data-en="Friday: 9:00 AM - 5:00 PM" data-fr="Vendredi : 9:00 - 17:00">Friday: 9:00 AM - 5:00 PM</li>
+                    <li data-en="Saturday: 10:00 AM - 4:00 PM" data-fr="Samedi : 10:00 - 16:00">Saturday: 10:00 AM - 4:00 PM</li>
+                    <li data-en="Sunday: Closed" data-fr="Dimanche : Fermé">Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col">
+                <h2 data-en="Book a Free Session" data-fr="Réservez une Session Gratuite">Book a Free Session</h2>
+                <form id="booking-form" class="row">
+                    <div class="form-group col-md-2 mb-2">
+                        <label for="name" class="sr-only">First Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-2 mb-2">
+                        <label for="surname" class="sr-only">Surname</label>
+                        <input type="text" class="form-control" id="surname" placeholder="Surname">
+                    </div>
+                    <div class="form-group col-md-3 mb-2">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-3 mb-2">
+                        <label for="date" class="sr-only">Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group col-md-2 mb-2">
+                        <button type="submit" class="btn btn-custom w-100" data-en="Book Now" data-fr="Réservez">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-transparent text-white text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Shaffer Conservatory and Instruments. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('notification').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('notification').style.display = 'none';
+            }, 3000);
+        });
+
+        function setLanguage(language) {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                if (language === 'fr') {
+                    el.innerHTML = el.dataset.fr;
+                    el.dataset.currentLang = 'fr';
+                } else {
+                    el.innerHTML = el.dataset.en;
+                    el.dataset.currentLang = 'en';
+                }
+            });
+            document.getElementById('language-toggle').innerHTML = language === 'fr' ? 'FR' : 'EN';
+        }
+
+        document.getElementById('language-toggle').addEventListener('click', function(event) {
+            event.preventDefault();
+            const currentLang = this.innerHTML === 'EN' ? 'fr' : 'en';
+            localStorage.setItem('preferredLanguage', currentLang);
+            setLanguage(currentLang);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(preferredLanguage);
+        });
+    </script>
+</body>
+</html>

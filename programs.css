@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(45deg, #000000, #cccccc);
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    opacity: 0.95;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFFFFF !important;
+}
+
+.nav-link {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF !important;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.nav-link:hover {
+    color: #CCCCCC !important;
+}
+
+.container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #21252a !important;
+    color: #FFFFFF;
+    height: 100%;
+}
+
+.card .lesson-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.card .price {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #BBBBBB;
+}
+
+.card .btn-custom {
+    background-color: #543aba;
+    opacity: 0.9;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.card .btn-custom:hover {
+    background-color: #AAAAAA;
+    color: #000000;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    padding: 1rem 0;
+}
+
+.footer a {
+    color: #CCCCCC !important;
+}
+
+.footer a:hover {
+    color: #FFFFFF !important;
+}

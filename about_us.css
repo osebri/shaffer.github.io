@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(45deg, #000000, #cccccc);
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    opacity: 0.95;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFFFFF !important;
+}
+
+.nav-link {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF !important;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.nav-link:hover {
+    color: #CCCCCC !important;
+}
+
+.container h2, .container h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+}
+
+.larger-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+p, li {
+    font-family: 'Lato', sans-serif;
+}
+
+.operating-hours li {
+    line-height: 1.8;
+}
+
+.form-control {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #BBBBBB;
+}
+
+.btn-custom {
+    background-color: #543aba;
+    opacity: 0.9;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    background-color: #AAAAAA;
+    color: #000000;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    padding: 1rem 0;
+}
+
+.footer a {
+    color: #CCCCCC !important;
+}
+
+.footer a:hover {
+    color: #FFFFFF !important;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
